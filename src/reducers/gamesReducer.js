@@ -13,5 +13,7 @@ const initState = {
         return { ...state };
     }
   };
+  //ACTION
+
   
   export default gamesReducer;
