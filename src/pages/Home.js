@@ -22,11 +22,35 @@ const {popular, newGames, upcoming} = useSelector(state =>state.games)
         <GameList>
             <h2>Upcoming games</h2>
             <Games>
-                
+            {upcoming.map((game) => {                        
+                           return <Game 
+                                key = {game.id} 
+                                id = {game.id} 
+                                name = {game.name} 
+                                released = {game.released}
+                                platforms = {game.platforms}
+                                image = {game.background_image}
+                            />                        
+                    })
+            }
             </Games>
             <h2>Popular Games</h2>
             <Games>
             {popular.map((game) => {                        
+                           return <Game 
+                                key = {game.id} 
+                                id = {game.id} 
+                                name = {game.name} 
+                                released = {game.released}
+                                platforms = {game.platforms}
+                                image = {game.background_image}
+                            />                        
+                    })
+            }
+            </Games>
+            <h2>New Games</h2>
+            <Games>
+            {newGames.map((game) => {                        
                            return <Game 
                                 key = {game.id} 
                                 id = {game.id} 
